@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>cart</title>
+    <link rel="stylesheet" href="style-min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <select id="langSwitch">
+                <option value="ar">عربي</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+
+            <li id="sections" class="sections">
+  <ul>
+    <li class="cat">
+      <a href="index.html" data-key="nav.main"></a>
+    </li>
+    <li class="cat">
+      <a href="hoodie.html" data-key="nav.hoodie"></a>
+    </li>
+    <li class="cat">
+      <a href="tshir.html" data-key="nav.tshirt"></a>
+    </li>
+    <li class="cat">
+      <a href="pant.html" data-key="nav.pant"></a>
+    </li>
+  </ul>
+</li>
+            <div class="cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count">0</span>
+            </div>
+          </li>
+        </ul>
+        <i id="list" class="fa-solid fa-bars"></i></li>
+        
+        </nav>
+      </header>
+              <div id="cardShopCart" class="cart-item">
+        </div> 
+        <div id="totalPrice"></div>
+
+
+        <div class="checkout-form">
+    <h3 data-key="checkout.title"></h3>
+    <input type="text" id="userName" data-placeholder="checkout.name" placeholder="" required>
+    <input type="phone" id="userPhone" data-placeholder="checkout.phone" placeholder="" required>
+    <input type="text" id="userAddress" data-placeholder="checkout.address" placeholder="" required>
+    <textarea id="userNote" data-placeholder="checkout.note" placeholder=""></textarea>
+    
+    <div class="location-box">
+        <button type="button" data-key="checkout.location" onclick="getLocation()" id="locationBtn">
+            
+        </button>
+        <p id="locationStatus"></p>
+    </div>
+
+    <button class="whatsapp-btn" data-key="checkout.whatsapp" onclick="sendToWhatsApp()">
+       <i class="fa-brands fa-whatsapp"></i>
+    </button>
+</div>
+  
+      <script src="./js/cart.js"></script>
+</div>
+  </body>
+</html>

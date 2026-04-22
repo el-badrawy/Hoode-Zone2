@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style-min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <select id="langSwitch">
+                <option value="ar">عربي</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+
+            <li id="sections" class="sections">
+  <ul>
+    <li class="cat">
+      <a href="index.html" data-key="nav.main"></a>
+    </li>
+    <li class="cat">
+      <a href="hoodie.html" data-key="nav.hoodie"></a>
+    </li>
+    <li class="cat">
+      <a href="tshir.html" data-key="nav.tshirt"></a>
+    </li>
+    <li class="cat">
+      <a href="pant.html" data-key="nav.pant"></a>
+    </li>
+  </ul>
+</li>
+            <div class="cart-icon">
+              <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              <span id="cart-count">0</span>
+            </div>
+          </li>
+        </ul>
+        <i id="list" class="fa-solid fa-bars"></i></li>
+        
+        </nav>
+      </header>
+
+              <div class="scroll-container"> </div>
+        <p class="disTitle" data-key="dis.title"></p>
+        <div id="displayProduct">
+        </div>
+                <div id="cardShop" class="cardShop">
+        </div>  
+
+
+
+        <div id="toast" class="toast">تم إضافة المنتج للسلة بنجاح 🛒</div>
+        <script src="./js/tshirt-min.js" defer></script>
+        <script src="./js/all-min.js" defer></script>
+    </div>
+  </body>
+</html>

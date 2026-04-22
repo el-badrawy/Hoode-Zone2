@@ -1,0 +1,92 @@
+    {
+    "nav.main":"الرئيسية",
+    "nav.hoodie":"هوديز",
+    "nav.tshirt":"تيشيرت",
+    "nav.pant":"بنطلون",
+
+    "bt.prev" :"السابق",
+    "bt.next" :"التالي",
+    "text.sell":"الأكثر مبيعا",
+
+    "text.shop":"مش مجرد لبس ...دي حكاية بتتخيط علشانك.كل قطعة بتتعمل بادينا .ستايل شبهك انت مش شبه حد",
+    "button.shop":"تسوق الأن \u2190",
+
+    "contact.us":"تواصل معنا :-",
+    
+    "rights.reserved":"جميع الحقوق محفوظه لدي Zone © 2026",
+    "who.we":"نحن علامه تجارية لبيع وتصنيع الملابس متخصصه فى التيشرتات و الهوديز و البناطيل تم انشاء هذه العلامه على ايدينا باعلي جوده و اعلي كفائه و اعلي تنصيع و فى مزيد من التطوير سائلين من الله التوفيق شكرا على ثقتكم بنا  ",
+    "devoloper":"تم التطوير بواسطة حسام",
+    "quick.link":"روابط سريعه",
+    "dis.title":"كل جديد",
+
+
+
+
+
+    "dis.name0":"Hoodie 1",
+    "dis.name1":"Hoodie 2",
+    "dis.name2":"Hoodie 3",
+    "dis.name3":"Hoodie 4",
+    "dis.name4":"Hoodie 5",
+    "dis.name5":"Hoodie 6",
+    "dis.name6":"Hoodie 7",
+    "dis.name7":"Hoodie 8",
+
+    "dis.nameT0":"T-Shirt 1",
+    "dis.nameT1":"T-Shirt 1",
+    "dis.nameT2":"T-Shirt 2",
+    "dis.nameT3":"T-Shirt 3",
+    "dis.nameT4":"T-Shirt 4",
+    "dis.nameT5":"T-Shirt 5",
+    "dis.nameT6":"T-Shirt 6",
+    "dis.nameT7":"T-Shirt 7",
+
+    "dis.nameP0":"Pant 1",
+    "dis.nameP1":"Pant 1",
+    "dis.nameP2":"Pant 2",
+    "dis.nameP3":"Pant 3",
+    "dis.nameP4":"Pant 4",
+    "dis.nameP5":"Pant 5",
+    "dis.nameP6":"Pant 6",
+    "dis.nameP7":"Pant 7",    
+    
+    
+        "shop.name0":"Hoodie 1",
+        "shop.name1":"Hoodie 2",
+        "shop.name2":"Hoodie 3",
+        "shop.name3":"Hoodie 4",
+        "shop.name4":"Hoodie 5",
+        "shop.name5":"Hoodie 6",
+        "shop.name6":"Hoodie 7",
+        "shop.name7":"Hoodie 8",
+        "shop.nameT0":"T-Shirt 1",
+        "shop.nameT1":"T-Shirt 1",
+        "shop.nameT2":"T-Shirt 2",
+        "shop.nameT3":"T-Shirt 3",
+        "shop.nameT4":"T-Shirt 4",
+        "shop.nameT5":"T-Shirt 5",
+        "shop.nameT6":"T-Shirt 6",
+        "shop.nameT7":"T-Shirt 7",
+        "shop.nameP0":"Pant 1",
+        "shop.nameP1":"Pant 1",
+        "shop.nameP2":"Pant 2",
+        "shop.nameP3":"Pant 3",
+        "shop.nameP4":"Pant 4",
+        "shop.nameP5":"Pant 5",
+        "shop.nameP6":"Pant 6",
+        "shop.nameP7":"Pant 7",
+
+
+
+    "checkout.title":"تاكيد الطلب",
+    "checkout.name":"الاسم بالكامل",
+    "checkout.phone":"رقم الموبايل",
+    "checkout.address":"العنوان بالتفصيل",
+    "checkout.note":"ملاحظات إضافية (اختياري)",
+    "checkout.whatsapp":" إكمال الطلب عبر واتساب ",
+    "checkout.location":"إرفاق موقعي الحالي 📍"
+
+
+
+ 
+}
