@@ -1,1 +1,186 @@
-let currentLang=localStorage.getItem("lang")||"en";var state=[],modalState={cur:0,images:[]};async function loadLang(e){localStorage.setItem("lang",e);try{let t=await fetch(`./lang/${e}.json`);if(!t.ok)throw new Error("File not found");let o=await t.json();document.querySelectorAll("[data-key]").forEach((e=>{let t=e.dataset.key;o[t]&&(e.textContent=o[t])})),document.querySelectorAll("[data-placeholder]").forEach((e=>{let t=e.dataset.placeholder;o[t]&&(e.placeholder=o[t])})),document.body.dir="ar"===e?"rtl":"ltr"}catch(e){}}function updateCount(){let e=(JSON.parse(localStorage.getItem("cart"))||[]).reduce(((e,t)=>e+(Number(t.quantity)||0)),0),t=document.getElementById("cart-count");t&&(t.innerText=e)}let sections=document.getElementById("sections"),menu=document.getElementById("list"),shop=document.getElementById("shop");function scrollClose(){sections&&sections.classList.contains("openList")&&(sections.classList.remove("openList"),sections.classList.add("closeList"))}function openModal(e){const t=allCardShop[e];modalState.images=t.images,modalState.cur=0,document.getElementById("modalImg").src=t.images[0];const o=document.querySelectorAll(".cardBuying")[e].querySelector(".shopName"),a=o.getAttribute("data-key"),n=o.innerText,s=document.getElementById("modalName");s&&(s.textContent=n,s.setAttribute("data-key",a)),document.getElementById("modalOffer").textContent=(t.offer||0)+" EGP",document.getElementById("modalPrice").textContent=(t.price||0)+" EGP";const l=document.getElementById("modalDots");l&&(l.innerHTML=t.images.map(((e,t)=>`<div class="dot ${0===t?"active":""}" onclick="modalGoTo(${t})"></div>`)).join("")),document.getElementById("modalOverlay").dataset.index=e,document.getElementById("modalOverlay").classList.add("open"),document.body.style.overflow="hidden"}function closeModal(){document.getElementById("modalOverlay").classList.remove("open"),document.body.style.overflow=""}function slide(e,t){state[e]||(state[e]={cur:0});const o=document.getElementById("slider"+e);if(!o)return;const a=o.querySelectorAll("img"),n=o.querySelectorAll(".dot");a.length>0&&(a[state[e].cur].classList.remove("active"),n[state[e].cur]&&n[state[e].cur].classList.remove("active"),state[e].cur=(state[e].cur+t+a.length)%a.length,a[state[e].cur].classList.add("active"),n[state[e].cur]&&n[state[e].cur].classList.add("active"))}function modalSlide(e){const t=document.getElementById("modalDots").querySelectorAll(".dot");t.length>0&&t[modalState.cur]&&t[modalState.cur].classList.remove("active"),modalState.cur=(modalState.cur+e+modalState.images.length)%modalState.images.length,document.getElementById("modalImg").src=modalState.images[modalState.cur],t.length>0&&t[modalState.cur]&&t[modalState.cur].classList.add("active")}function modalGoTo(e){const t=document.getElementById("modalDots").querySelectorAll(".dot");t[modalState.cur]&&t[modalState.cur].classList.remove("active"),modalState.cur=e,document.getElementById("modalImg").src=modalState.images[e],t[e]&&t[e].classList.add("active")}function addToCartModal(){let e=document.getElementById("modalOverlay").dataset.index,t=document.getElementById("modalSize").value,o=document.getElementById("modalName");t?(saveToCart(allCardShop[e].images[0],o.getAttribute("data-key"),o.textContent,allCardShop[e].price,t),closeModal()):showToast("من فضلك اختر المقاس أولاً! ⚠️","error")}function addToCart(e,t){let o=t.closest(".cardBuying"),a=o.querySelector(".size").value,n=o.querySelector(".shopName");a?saveToCart(allCardShop[e].images[0],n.getAttribute("data-key"),n.innerText,allCardShop[e].price,a):showToast("من فضلك اختر المقاس أولاً! ⚠️","error")}function saveToCart(e,t,o,a,n){let s=JSON.parse(localStorage.getItem("cart"))||[],l={img:e,nameKey:t,name:o,price:a,size:n,quantity:1},c=s.find((e=>e.img===l.img&&e.size===l.size));c?c.quantity++:s.push(l),localStorage.setItem("cart",JSON.stringify(s)),updateCount(),showToast("تمت الإضافة بنجاح 🛒","success")}function showToast(e,t){let o=document.getElementById("toast");o&&(o.innerText=e,o.className=`toast show ${t}`,setTimeout((()=>o.classList.remove("show")),2e3))}function setActiveCategory(){let e=window.location.pathname.split("/").pop()||"index.html";document.querySelectorAll(".cat").forEach((e=>e.classList.remove("active"))),document.querySelectorAll(".cat a").forEach((t=>{t.getAttribute("href")===e&&t.parentElement.classList.add("active")}))}menu&&menu.addEventListener("click",(function(){sections.classList.contains("openList")?sections.classList="closeList":sections.classList="openList"})),shop&&shop.addEventListener("click",(function(){window.removeEventListener("scroll",scrollClose),window.scrollTo({top:0,behavior:"smooth"}),window.innerWidth<767&&(sections.classList="openList"),setTimeout((()=>{window.addEventListener("scroll",scrollClose)}),1e3)})),document.addEventListener("DOMContentLoaded",(()=>{loadLang(currentLang),updateCount(),setActiveCategory();let e=document.getElementById("langSwitch");e&&(e.value=currentLang,e.addEventListener("change",(e=>loadLang(e.target.value))))})),window.addEventListener("pageshow",updateCount),window.addEventListener("scroll",scrollClose),window.addEventListener("resize",(()=>{window.innerWidth>767&&sections&&sections.classList.remove("openList","closeList")}));
+let currentLang = localStorage.getItem("lang") || "en";
+var state = [],
+  modalState = { cur: 0, images: [] };
+async function loadLang(e) {
+  localStorage.setItem("lang", e);
+  try {
+    let t = await fetch(`./lang/${e}.json`);
+    if (!t.ok) throw new Error("File not found");
+    let o = await t.json();
+    (document.querySelectorAll("[data-key]").forEach((e) => {
+      let t = e.dataset.key;
+      o[t] && (e.textContent = o[t]);
+    }),
+      document.querySelectorAll("[data-placeholder]").forEach((e) => {
+        let t = e.dataset.placeholder;
+        o[t] && (e.placeholder = o[t]);
+      }),
+      (document.body.dir = "ar" === e ? "rtl" : "ltr"));
+  } catch (e) {}
+}
+function updateCount() {
+  let e = (JSON.parse(localStorage.getItem("cart")) || []).reduce(
+      (e, t) => e + (Number(t.quantity) || 0),
+      0,
+    ),
+    t = document.getElementById("cart-count");
+  t && (t.innerText = e);
+}
+let sections = document.getElementById("sections"),
+  menu = document.getElementById("list"),
+  shop = document.getElementById("shop");
+function scrollClose() {
+  sections &&
+    sections.classList.contains("openList") &&
+    (sections.classList.remove("openList"),
+    sections.classList.add("closeList"));
+}
+function openModal(e) {
+  const t = allCardShop[e];
+  ((modalState.images = t.images),
+    (modalState.cur = 0),
+    (document.getElementById("modalImg").src = t.images[0]));
+  const o = document
+      .querySelectorAll(".cardBuying")
+      [e].querySelector(".shopName"),
+    a = o.getAttribute("data-key"),
+    n = o.innerText,
+    s = document.getElementById("modalName");
+  (s && ((s.textContent = n), s.setAttribute("data-key", a)),
+    (document.getElementById("modalOffer").textContent =
+      (t.offer || 0) + " EGP"),
+    (document.getElementById("modalPrice").textContent =
+      (t.price || 0) + " EGP"));
+  const l = document.getElementById("modalDots");
+  (l &&
+    (l.innerHTML = t.images
+      .map(
+        (e, t) =>
+          `<div class="dot ${0 === t ? "active" : ""}" onclick="modalGoTo(${t})"></div>`,
+      )
+      .join("")),
+    (document.getElementById("modalOverlay").dataset.index = e),
+    document.getElementById("modalOverlay").classList.add("open"),
+    (document.body.style.overflow = "hidden"));
+}
+function closeModal() {
+  (document.getElementById("modalOverlay").classList.remove("open"),
+    (document.body.style.overflow = ""));
+}
+function slide(e, t) {
+  state[e] || (state[e] = { cur: 0 });
+  const o = document.getElementById("slider" + e);
+  if (!o) return;
+  const a = o.querySelectorAll("img"),
+    n = o.querySelectorAll(".dot");
+  a.length > 0 &&
+    (a[state[e].cur].classList.remove("active"),
+    n[state[e].cur] && n[state[e].cur].classList.remove("active"),
+    (state[e].cur = (state[e].cur + t + a.length) % a.length),
+    a[state[e].cur].classList.add("active"),
+    n[state[e].cur] && n[state[e].cur].classList.add("active"));
+}
+function modalSlide(e) {
+  const t = document.getElementById("modalDots").querySelectorAll(".dot");
+  (t.length > 0 &&
+    t[modalState.cur] &&
+    t[modalState.cur].classList.remove("active"),
+    (modalState.cur =
+      (modalState.cur + e + modalState.images.length) %
+      modalState.images.length),
+    (document.getElementById("modalImg").src =
+      modalState.images[modalState.cur]),
+    t.length > 0 &&
+      t[modalState.cur] &&
+      t[modalState.cur].classList.add("active"));
+}
+function modalGoTo(e) {
+  const t = document.getElementById("modalDots").querySelectorAll(".dot");
+  (t[modalState.cur] && t[modalState.cur].classList.remove("active"),
+    (modalState.cur = e),
+    (document.getElementById("modalImg").src = modalState.images[e]),
+    t[e] && t[e].classList.add("active"));
+}
+function addToCartModal() {
+  let e = document.getElementById("modalOverlay").dataset.index,
+    t = document.getElementById("modalSize").value,
+    o = document.getElementById("modalName");
+  t
+    ? (saveToCart(
+        allCardShop[e].images[0],
+        o.getAttribute("data-key"),
+        o.textContent,
+        allCardShop[e].price,
+        t,
+      ),
+      closeModal())
+    : showToast("من فضلك اختر المقاس أولاً! ⚠️", "error");
+}
+function addToCart(e, t) {
+  let o = t.closest(".cardBuying"),
+    a = o.querySelector(".size").value,
+    n = o.querySelector(".shopName");
+  a
+    ? saveToCart(
+        allCardShop[e].images[0],
+        n.getAttribute("data-key"),
+        n.innerText,
+        allCardShop[e].price,
+        a,
+      )
+    : showToast("من فضلك اختر المقاس أولاً! ⚠️", "error");
+}
+function saveToCart(e, t, o, a, n) {
+  let s = JSON.parse(localStorage.getItem("cart")) || [],
+    l = { img: e, nameKey: t, name: o, price: a, size: n, quantity: 1 },
+    c = s.find((e) => e.img === l.img && e.size === l.size);
+  (c ? c.quantity++ : s.push(l),
+    localStorage.setItem("cart", JSON.stringify(s)),
+    updateCount(),
+    showToast("تمت الإضافة بنجاح 🛒", "success"));
+}
+function showToast(e, t) {
+  let o = document.getElementById("toast");
+  o &&
+    ((o.innerText = e),
+    (o.className = `toast show ${t}`),
+    setTimeout(() => o.classList.remove("show"), 2e3));
+}
+function setActiveCategory() {
+  let e = window.location.pathname.split("/").pop() || "index.html";
+  (document
+    .querySelectorAll(".cat")
+    .forEach((e) => e.classList.remove("active")),
+    document.querySelectorAll(".cat a").forEach((t) => {
+      t.getAttribute("href") === e && t.parentElement.classList.add("active");
+    }));
+}
+(menu &&
+  menu.addEventListener("click", function () {
+    sections.classList.contains("openList")
+      ? (sections.classList = "closeList")
+      : (sections.classList = "openList");
+  }),
+  shop &&
+    shop.addEventListener("click", function () {
+      (window.removeEventListener("scroll", scrollClose),
+        window.scrollTo({ top: 0, behavior: "smooth" }),
+        window.innerWidth < 767 && (sections.classList = "openList"),
+        setTimeout(() => {
+          window.addEventListener("scroll", scrollClose);
+        }, 1e3));
+    }),
+  document.addEventListener("DOMContentLoaded", () => {
+    (loadLang(currentLang), updateCount(), setActiveCategory());
+    let e = document.getElementById("langSwitch");
+    e &&
+      ((e.value = currentLang),
+      e.addEventListener("change", (e) => loadLang(e.target.value)));
+  }),
+  window.addEventListener("pageshow", updateCount),
+  window.addEventListener("scroll", scrollClose),
+  window.addEventListener("resize", () => {
+    window.innerWidth > 767 &&
+      sections &&
+      sections.classList.remove("openList", "closeList");
+  }));
