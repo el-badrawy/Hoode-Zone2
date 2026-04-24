@@ -59,6 +59,45 @@
 
 
 
+
+
+<!-- لما اضغط على الكارت  -->
+      <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+          <div class="modal-slider" id="modalSlider">
+            <img id="modalImg" src="" alt="">
+            <button class="sliderBtn prev" onclick="modalSlide(-1)">&#8249;</button>
+            <button class="sliderBtn next" onclick="modalSlide(1)">&#8250;</button>
+            <div class="sliderDots" id="modalDots"></div>
+          </div>
+          <div class="modal-info">
+            <p class="modal-name" id="modalName"></p>
+            <p class="modal-offer" id="modalOffer"></p>
+            <p class="modal-price" id="modalPrice"></p>
+            <div class="boxSize">
+              <select class="size" id="modalSize">
+                <option value="">size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+              </select>
+              <button class="addToCart-btn" onclick="addToCartModal()">
+                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
         <div id="toast" class="toast">تم إضافة المنتج للسلة بنجاح 🛒</div>
         <script src="./js/tshirt-min.js" defer></script>
         <script src="./js/all-min.js" defer></script>
