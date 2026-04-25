@@ -23,14 +23,12 @@
 
 
 
-    "dis.name0":"فريبا",
-    "dis.name1":"فريبا",
-    "dis.name2":"فريبا",
-    "dis.name3":"فريبا",
-    "dis.name4":"فريبا",
-    "dis.name5":"فريبا",
-    "dis.name6":"فريبا",
-    "dis.name7":"فريبا",
+    "dis.name0":"قريبا",
+    "dis.name1":"قريبا",
+    "dis.name2":"قريبا",
+    "dis.name3":"قريبا",
+    "dis.name4":"قريبا",
+    "dis.name5":"قريبا",
 
     "dis.nameT0":"T-Shirt 1",
     "dis.nameT1":"T-Shirt 1",
@@ -39,7 +37,6 @@
     "dis.nameT4":"T-Shirt 4",
     "dis.nameT5":"T-Shirt 5",
     "dis.nameT6":"T-Shirt 6",
-    "dis.nameT7":"T-Shirt 7",
 
     "dis.nameP0":"Pant 1",
     "dis.nameP1":"Pant 1",
@@ -47,8 +44,7 @@
     "dis.nameP3":"Pant 3",
     "dis.nameP4":"Pant 4",
     "dis.nameP5":"Pant 5",
-    "dis.nameP6":"Pant 6",
-    "dis.nameP7":"Pant 7",    
+    "dis.nameP6":"Pant 6",   
     
     
         "shop.name0":"قريبا",
@@ -57,7 +53,6 @@
         "shop.name3":"قريبا",
         "shop.name4":"قريبا",
         "shop.name5":"قريبا",
-        "shop.name6":"قريبا",
         "shop.nameT0":"T-Shirt 1",
         "shop.nameT1":"T-Shirt 1",
         "shop.nameT2":"T-Shirt 2",
@@ -65,7 +60,6 @@
         "shop.nameT4":"T-Shirt 4",
         "shop.nameT5":"T-Shirt 5",
         "shop.nameT6":"T-Shirt 6",
-        "shop.nameT7":"T-Shirt 7",
         "shop.nameP0":"Pant 1",
         "shop.nameP1":"Pant 1",
         "shop.nameP2":"Pant 2",
@@ -73,7 +67,6 @@
         "shop.nameP4":"Pant 4",
         "shop.nameP5":"Pant 5",
         "shop.nameP6":"Pant 6",
-        "shop.nameP7":"Pant 7",
 
 
 
