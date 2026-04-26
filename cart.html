@@ -9,7 +9,7 @@
     />
 
     <title>cart</title>
-    <link rel="stylesheet" href="style-min.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -54,6 +54,8 @@
         <div id="totalPrice"></div>
 
 
+        <input type="text" id="codeOffer" data-placeholder="checkout.code" placeholder="" required>
+        <button id="btnCode" onclick="applyDiscountCode()">Apply</button>
         <div class="checkout-form">
     <h3 data-key="checkout.title"></h3>
     <input type="text" id="userName" data-placeholder="checkout.name" placeholder="" required>
@@ -73,7 +75,7 @@
     </button>
 </div>
   
-      <script src="./js/cart-min.js"></script>
+      <script src="./js/cart.js"></script>
 </div>
   </body>
 </html>
