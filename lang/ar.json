@@ -71,6 +71,7 @@
 
 
     "checkout.title":"تاكيد الطلب",
+    "checkout.code":"كود الخصم (اختياري)",
     "checkout.name":"الاسم بالكامل",
     "checkout.phone":"رقم الموبايل",
     "checkout.address":"العنوان بالتفصيل",

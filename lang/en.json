@@ -79,6 +79,7 @@
     "shop.nameP7":"P.name8",
 
     "checkout.title":"Complete Purchase",
+    "checkout.code":"Discount Code (Optional)",
     "checkout.name":"Full Name",
     "checkout.phone":"Phone",
     "checkout.address":"Address details",
