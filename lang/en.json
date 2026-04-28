@@ -54,7 +54,10 @@
     "checkout.whatsapp":"Complete the order via WhatsApp",
     "checkout.location":"Attach your current location 📍",
 
-    "slect.print":"Select Print"
+    "slect.print":"Select Print",
+    "dis.allPrint":"select the suitable print",
+    "print.nameDisplay":"Not selected",
+    "print":"Print: "
 
 
 

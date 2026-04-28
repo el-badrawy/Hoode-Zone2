@@ -53,7 +53,10 @@
     "checkout.whatsapp":" إكمال الطلب عبر واتساب ",
     "checkout.location":"إرفاق موقعي الحالي 📍",
 
-    "slect.print":"اختر الطبعة"
+    "slect.print":"اختر الطبعة",
+    "dis.allPrint":"اختر الطبعة المناسبة",
+    "print.nameDisplay":"لم يتم الاختيار",
+    "print":"الطبعة: "
 
 
     

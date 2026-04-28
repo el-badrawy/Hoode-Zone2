@@ -52,8 +52,8 @@ allCardShop.forEach((e, i) => {
         <option>XXL (85kg - 100kg)</option>
       </select>
       <div class="selected-print-display" onclick="event.stopPropagation()">
-        <span>الطبعة: </span>
-        <span id="printNameDisplay${i}" class="print-name-text">لم يتم الاختيار</span>
+        <span data-key="print"> </span>
+        <span data-key="print.nameDisplay"  id="printNameDisplay${i}" class="print-name-text">لم يتم الاختيار</span>
         <input type="hidden" id="printValue${i}" value="">
       </div>
     </div>
