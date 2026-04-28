@@ -545,7 +545,7 @@ body[style*="direction:rtl"] #displayProduct {
 }
 .cardBuying {
   width: 300px;
-  height: 500px;
+  height: 510px;
   margin: 10px 0;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
@@ -875,18 +875,13 @@ body[style*="direction:rtl"] #displayProduct {
 .selected-print-display {
     margin-top: 8px;
     font-size: 13px;
-    background: #f8f9fa;
     padding: 5px;
-    border-radius: 4px;
-    border: 1px dashed #ccc;
     width: 100%;
     text-align: center;
-        background: rgba(0, 0, 0, 0.193);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.193);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 .selected-print-display span{
     color: #e74c3c;
