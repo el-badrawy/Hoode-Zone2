@@ -38,3 +38,7 @@ function startAuto() {
   }, 2e3);
 }
 (update(), startAuto(), loadLang(currentLang));
+
+if(document.querySelector("imgSlider").length<=1){
+  document.querySelector("sliderBtn next").style.display="none";
+}

@@ -19,32 +19,6 @@
     "quick.link":"روابط سريعه",
     "dis.title":"كل جديد",
 
-
-
-
-
-    "dis.name0":"قريبا",
-    "dis.name1":"قريبا",
-    "dis.name2":"قريبا",
-    "dis.name3":"قريبا",
-    "dis.name4":"قريبا",
-    "dis.name5":"قريبا",
-
-    "dis.nameT0":"T-Shirt 1",
-    "dis.nameT1":"T-Shirt 1",
-    "dis.nameT2":"T-Shirt 2",
-    "dis.nameT3":"T-Shirt 3",
-    "dis.nameT4":"T-Shirt 4",
-    "dis.nameT5":"T-Shirt 5",
-    "dis.nameT6":"T-Shirt 6",
-
-    "dis.nameP0":"Pant 1",
-    "dis.nameP1":"Pant 1",
-    "dis.nameP2":"Pant 2",
-    "dis.nameP3":"Pant 3",
-    "dis.nameP4":"Pant 4",
-    "dis.nameP5":"Pant 5",
-    "dis.nameP6":"Pant 6",   
     
     
         "shop.name0":"قريبا",
@@ -53,20 +27,20 @@
         "shop.name3":"قريبا",
         "shop.name4":"قريبا",
         "shop.name5":"قريبا",
-        "shop.nameT0":"T-Shirt 1",
-        "shop.nameT1":"T-Shirt 1",
-        "shop.nameT2":"T-Shirt 2",
-        "shop.nameT3":"T-Shirt 3",
-        "shop.nameT4":"T-Shirt 4",
-        "shop.nameT5":"T-Shirt 5",
-        "shop.nameT6":"T-Shirt 6",
-        "shop.nameP0":"Pant 1",
-        "shop.nameP1":"Pant 1",
-        "shop.nameP2":"Pant 2",
-        "shop.nameP3":"Pant 3",
-        "shop.nameP4":"Pant 4",
-        "shop.nameP5":"Pant 5",
-        "shop.nameP6":"Pant 6",
+    "shop.nameT0":"T.Shirt Sky Blue",
+    "shop.nameT1":"T.Shirt Navy Blue 05",
+    "shop.nameT2":"T.Shirt Beige balck duck",
+    "shop.nameT3":"T.Shirt Brown 313",
+    "shop.nameT4":"T.Shirt Gray Out Side",
+    "shop.nameT5":"T.Shirt Gray Sktd est.75",
+    "shop.nameT6":"T.Shirt off white Dogma",
+    "shop.nameT7":"T.ٍShirt Burgundy 919",
+
+    "shop.nameP0":"Pant Black",
+    "shop.nameP1":"Pant white",
+    "shop.nameP2":"Pant Brown",
+    "shop.nameP3":"Pant Olive Green",
+    "shop.nameP4":"Pant Blue",
 
 
 
