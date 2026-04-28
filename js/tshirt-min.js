@@ -87,6 +87,9 @@ const availablePrints = [
   { id: "p22", name: "V", img: "prints/22.0.jpeg" },
   { id: "p23", name: "W", img: "prints/23.0.jpeg" },
   { id: "p24", name: "X", img: "prints/24.0.jpeg" },
+  { id: "p25", name: "Y", img: "prints/25.0.jpeg" },
+  { id: "p26", name: "Z", img: "prints/26.0.jpeg" },
+  { id: "p27", name: "A0", img: "prints/27.0.jpeg" },
 ];
 
 function disPrint(index) {
