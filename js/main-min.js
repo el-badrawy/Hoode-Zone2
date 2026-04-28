@@ -1,14 +1,9 @@
 const products = [
-    { image: "hoodies/1.1.webp" },
-    { image: "hoodies/2.1.webp" },
-    { image: "hoodies/3.1.webp" },
-    { image: "hoodies/4.1.webp" },
-    { image: "t-shirt/1.1.webp" },
-    { image: "t-shirt/2.1.webp" },
-    { image: "t-shirt/3.1.webp" },
-    { image: "pants/1.1.webp" },
-    { image: "pants/2.1.webp" },
-    { image: "pants/3.1.webp" },
+    { image: "t-shirt/1.0 AM.webp" },
+    { image: "t-shirt/3.0 AM.webp" },
+    { image: "t-shirt/5.0 AM.webp" },
+    { image: "pants/1.0.webp" },
+    { image: "pants/2.0.webp" },
   ],
   carouse = document.getElementById("moreSell");
 let html = "";
@@ -38,7 +33,3 @@ function startAuto() {
   }, 2e3);
 }
 (update(), startAuto(), loadLang(currentLang));
-
-if(document.querySelector("imgSlider").length<=1){
-  document.querySelector("sliderBtn next").style.display="none";
-}
