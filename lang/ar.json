@@ -51,9 +51,11 @@
     "checkout.address":"العنوان بالتفصيل",
     "checkout.note":"ملاحظات إضافية (اختياري)",
     "checkout.whatsapp":" إكمال الطلب عبر واتساب ",
-    "checkout.location":"إرفاق موقعي الحالي 📍"
+    "checkout.location":"إرفاق موقعي الحالي 📍",
+
+    "slect.print":"اختر الطبعة"
 
 
-
+    
  
 }

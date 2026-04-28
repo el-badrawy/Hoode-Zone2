@@ -52,7 +52,9 @@
     "checkout.address":"Address details",
     "checkout.note":"Note(choose)",
     "checkout.whatsapp":"Complete the order via WhatsApp",
-    "checkout.location":"Attach your current location 📍"
+    "checkout.location":"Attach your current location 📍",
+
+    "slect.print":"Select Print"
 
 
 
