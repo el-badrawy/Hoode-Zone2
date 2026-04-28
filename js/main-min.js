@@ -1,16 +1,3 @@
-const products = [
-    { image: "t-shirt/1.0 AM.webp" },
-    { image: "t-shirt/3.0 AM.webp" },
-    { image: "t-shirt/5.0 AM.webp" },
-    { image: "pants/1.0.webp" },
-    { image: "pants/2.0.webp" },
-  ],
-  carouse = document.getElementById("moreSell");
-let html = "";
-(products.forEach((e, t) => {
-  html += `\n  <div class="card">\n    <img src=${e.image} loading="lazy">\n  </div>\n  `;
-}),
-  (carouse.innerHTML = html));
 const cards = Array.from(document.querySelectorAll(".card"));
 let interval,
   autoTimeout,
