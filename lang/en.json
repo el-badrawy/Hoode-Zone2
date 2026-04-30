@@ -1,9 +1,9 @@
 
 {
     "nav.main": "Home",
-    "nav.hoodie": "Hoodies",
-    "nav.tshirt": "T-Shirts",
-    "nav.pant": "pants",
+    "nav.hoodie": "Hoodie",
+    "nav.tshirt": "T-Shirt",
+    "nav.pant": "pant",
 
     "text.sell":"Best-selling",
     "bt.prev": "Prev",
