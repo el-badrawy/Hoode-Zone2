@@ -21,6 +21,7 @@ const allCardShop = [
   { images: ["t-shirt/6.0 AM.webp", "t-shirt/6.1 AM.webp"], price, name: "", offer },
   { images: ["t-shirt/7.0 AM.webp", "t-shirt/7.1 AM.webp", "t-shirt/7.2 AM.webp"], price, name: "", offer },
   { images: ["t-shirt/8.0 AM.webp", "t-shirt/8.1 AM.webp"], price, name: "", offer },
+  { images: ["t-shirt/9.0 AM.webp", "t-shirt/9.1 AM.webp", "t-shirt/9.2 AM.webp", "t-shirt/9.3 AM.webp", "t-shirt/9.4 AM.webp"], price, name: "", offer },
 ];
 
 let cardShop = document.getElementById("cardShop"), html = "";
